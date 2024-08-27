@@ -54,6 +54,42 @@ console.log(typeof anotherID);
 //https://262.ecma-international.org/5.1/#sec-11.4.3
 
 
+// Memory allocation in js /////
+
+// Stack (primitive) apko yaha copy milega   Heap(Non-primitive)  apko yaha refference milega
+
+let myname = "Rishav Raj"
+
+
+let anotherName = myname
+anotherName = "Sunny"
+
+console.log(anotherName);
+console.log(myname);
+
+
+let user = {
+    email: "user1@google.com",
+    upi: "user@ybl.com"
+}
+
+
+let user2 = user;
+
+user2.email = "user@yahoo.com"
+
+console.log(user.email);
+console.log(user2.email);
+
+
+
+
+
+
+
+
+
+
 
 
 
