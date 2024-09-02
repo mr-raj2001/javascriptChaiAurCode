@@ -80,6 +80,34 @@ console.log(tinderUser.hasOwnProperty('email'));
 console.log(tinderUser.hasOwnProperty('isLoggedIn'));
 
 
+const course = {
+    coursename : "js in hindi",
+    coursePrice: "999",
+    courseinstructor: "Rishav"
+}
 
 
 
+const {courseinstructor: instrutor} = course
+
+console.log(instrutor);
+
+
+// const navabar = ({company}) => {
+//  //yaha destructring kiya ja raha he yeh example react ka he 
+// }
+
+
+// navabar(company = "hitesh")
+
+// {
+//     "name": "Rishav",
+//     "courseName": "js in hindi",
+//     "price": "free"
+// }
+
+[
+    {},
+    {},
+    {}
+]
