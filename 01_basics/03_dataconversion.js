@@ -38,7 +38,7 @@ console.log(1 + "2");
 console.log("1" + 2 + 2);
 console.log(1 + 2 + "2");
 
-console.log(+true)
+console.log(+true)  //it will convert true to 1 using unary plus
 console.log(+"")
 
 let num1, num2, num3 
