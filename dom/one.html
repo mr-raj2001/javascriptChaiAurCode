@@ -4,14 +4,70 @@
     <meta charset="UTF-8">
 
     <title>Dom Learning</title>
+    <style>
+        .bgblack{
+            background-color: black;
+            color: white;
+            padding: 20px;
+        }
+    </style>
 </head>
-<body>
+<body  class="bgblack">
     <div class="bgblack">
-        <h1 class="heading">Dom learning on chai aur code</h1>
+        <h1 class="heading" id="title">Dom learning on chai aur code</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nesciunt quae voluptatum? Optio, dolorum. Similique, ut tenetur reprehenderit maiores consequuntur non voluptatem ducimus deserunt, ad quis mollitia error! Esse, molestiae.</p>    
     </div>
     <!-- console.log(window)
     console.log(window.document) 
-    console.dir(document)-->
+    console.dir(document)
+    getAttribute
+    setAttribute
+    title.style.backgroundColor = 'green'
+    title.textContent  ///non visible text would also be visible
+    title.innerHTMl  //pura html ka valu dega like <h1> <span> etc
+    title.innerText  only visisble text would be printed
+
+    document.querySelector('h1')   //gives only the first h1 
+    document.querySelectorAll('h1')   //gives all the h1
+
+    document.querySelector('#title')
+    document.querySelector('.heading')
+    document.querySelector('inout[type="password"]')
+     const myul = document.querySelector('ul')
+     const turngreen = myul.querySelector('li')
+
+     turnGreen.style.padding="10"
+     turnGreen.innerText = "I am green"
+
+     const templist = document.querySelectorAll('li')
+      
+     templilist nodelist he 
+
+     templilist[0].style.color = "green"  we canot do templilist.style.color= green
+
+
+        templist.forEach((li) => {
+            li.style.color = "red"
+        })
+
+        const temclasslsit = document.getElementByClassName('list-item')  //it gives html collection
+
+       const myconvertedArray =  Array.from(tempclasslist)  no we can use for each in this 
+
+       
+
+        
+    
+
+     
+    -->
+
+   <ul>
+    <li class = 'listitem'>one</li>
+    <li class = 'listitem'>two</li>
+    <li class = 'listitem'>three</li>
+   </ul>
+
+
 </body>
 </html>
