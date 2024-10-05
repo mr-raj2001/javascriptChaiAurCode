@@ -56,10 +56,14 @@ function addone(num){
 }
 
 addTwo(5)  //will give error because we stored in variable 
-
+//func
 const addTwo = function(num){
     return num+ 2;
 }
+
+//this is function hosting 
+
+
 
 //this keyword tells about current context
 

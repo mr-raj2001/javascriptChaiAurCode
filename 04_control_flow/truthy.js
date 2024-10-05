@@ -49,7 +49,7 @@ let val1;
 
  //ternary operator 
 
- condition ? true : false
+//  condition ? true : false
  
  
 
