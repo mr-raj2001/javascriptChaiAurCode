@@ -25,8 +25,56 @@
          document.getElementById('title').getAttribute('class')
          document.getElementById('title').setAttribute('class','test') //yeh hamesa override karega
          document.getElementById('title').setAttribute('class','title','heading')
-         title.style.backgroundColor  
+         title.style.backgroundColor 
+         innerText and text Content inner text will only show visible text and innerContent will show hidden text too
+         inner html will give pura html value 
+         document.querySelector('h1')
+         p>lorem5
+         ul>li*3
+         input:password
+
+         querySelector
+         querySelectorAll will give nodelist
+
+         document.querySelectorAll('li')
+NodeList(3) [li, li, li]0: li1: li2: lilength: 3[[Prototype]]: NodeListentries: ƒ entries()forEach: ƒ forEach()item: ƒ item()keys: ƒ keys()length: (...)values: ƒ values()constructor: ƒ NodeList()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.toStringTag): "NodeList"get length: ƒ length()[[Prototype]]: Object
+const tempList = document.querySelectorAll('li')
+undefined
+tem
+VM1372:1 Uncaught ReferenceError: tem is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM1372:1Understand this error
+tempList[1].style.color='green'
+'green'
+
+tempList.forEach(function (l) {
+    l.style.backgroundColor= 'green';
+})
+
+shift+ alt + down/up   ; shift+alt+ press anywhere for multiple cursors
+
+
+document.getElementsByClassName('listitem')
+HTMLCollection(4) [h1.listitem, h1.listitem, h2.listitem, h2.listitem]
+const tempClassList = document.getElementsByClassName('listitem')
+undefined
+tempClassList
+HTMLCollection(4) [h1.listitem, h1.listitem, h2.listitem, h2.listitem]
+Array.from(tempClassList)
+(4) [h1.listitem, h1.listitem, h2.listitem, h2.listitem]
          -->
+         <h1 class="listitem">Lorem ipsum dolor sit amet.</h1>
+         <h1 class="listitem">Lorem ipsum dolor sit amet.</h1>
+         <h2 class="listitem">Lorem ipsum dolor sit amet.</h2>
+         <h2 class="listitem">Lorem ipsum dolor sit amet consectetur.</h2>
+         <p>Lorem ipsum dolor sit amet.</p>
+         <input type="password" name="" id="">
+
+         <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+         </ul>
     </div>
 </body>
 </html>
