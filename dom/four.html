@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom | chai aur code</title>
+</head>
+<body style="background-color: black; color: white">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+
+    //is method se problem he pura tree traverse karna par raha he optimization issue here
+    function addLanguage(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li);
+    }
+
+    addLanguage("python");
+    addLanguage("Typescript")
+
+    //yeh approach todha optimize he app pura tree ko traverse nahi karte ho
+    function addoptiLanguage(langname){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langname));
+        document.querySelector('.language').appendChild(li);
+    }
+
+    addoptiLanguage('goLang');
+   
+    //Edit value
+
+   const secondLang =  document.querySelector("li:nth-child(2)");
+   const newLi = document.createElement('li');
+   newLi.textContent = "Disco"; //textContent aur innerHtml me jada difference nahi he
+   secondLang.replaceWith(newLi)
+
+   //edit
+   const firstLang = document.querySelector('li:first-child')
+   firstLang.outerHTML = "<li>React</li>"
+
+   //remove
+   const lastLang = document.querySelector('li:last-child');
+   lastLang.remove();
+
+</script>
+</html>
