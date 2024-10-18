@@ -1,0 +1,16 @@
+js 
+synchronous he aur single threaded
+
+Execution Context
+
+execute one line of code at a time
+
+console.log 1
+console.log 2
+
+call stack memory heap
+
+Blocking code non blocking code
+
+in diagram take for example print 1 setTimeout(0,print 2 ),print 3 ab 2 will be printed after 3 event if its timeout is 0 kyuki woh fucntion he toh register call back se hoke queue se hoke stack me jayega to execute 
+fetch is something which has promise so it has a priority queue .

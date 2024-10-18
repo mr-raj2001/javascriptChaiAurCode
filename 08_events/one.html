@@ -34,23 +34,23 @@
       //target,toElement, srcElement,currentTarget
       //clientX,clientY,screenX,screenY
       //altKey,ctrlKey,shiftKey, keyCode
-      document.getElementById('owl').addEventListener('click', function(e){
-        console.log(e);
+    //   document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log(e);
         
-        // alert('owl clicked');
-      },false) //default bhi false hota he 
+    //     // alert('owl clicked');
+    //   },false) //default bhi false hota he 
 
      //event propogation 2 types event bubling and event capturing 
     
-     document.getElementById('images').addEventListener('click', function(e){
-         console.log("clicked inside the ul");
+    //  document.getElementById('images').addEventListener('click', function(e){
+    //      console.log("clicked inside the ul");
          
-     },false)
+    //  },false)
 
-     document.getElementById('owl').addEventListener('click', function(e){
-         console.log("clicked the owl");
+    //  document.getElementById('owl').addEventListener('click', function(e){
+    //      console.log("clicked the owl");
          
-     },false)   //bubbling up image propogation
+    //  },false)   //bubbling up image propogation
 
      //capturing mode for that do true phir ulta hoga upar se niche hoga
 
@@ -66,8 +66,41 @@
     //     console.log("google clicked");
         
     // },false)
+   
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log(e);
+
+    // })
+
+
+    document.getElementById('images').addEventListener('click', function(e) {
+    // Check if the clicked element is an image
+    if (e.target.tagName.toLowerCase() === 'img') {
+        const imageSrc = e.target.src;
+        console.log("Image source: ", imageSrc);
+
+     
+        //e.target.style.visibility = 'hidden'; 
+        e.target.style.display = 'none';    
+    }
+});
+
+
+// document.addEventListener('click', function(event) {
+//     console.log('Event type:', event.type);
+//     console.log('Time of event:', event.timeStamp);
+//     console.log('Was default prevented:', event.defaultPrevented);
+//     console.log('Target element:', event.target);
+//     console.log('Client coordinates:', event.clientX, event.clientY);
+//     console.log('Screen coordinates:', event.screenX, event.screenY);
+//     console.log('Alt key pressed:', event.altKey);
+//     console.log('Ctrl key pressed:', event.ctrlKey);
+//     console.log('Shift key pressed:', event.shiftKey);
+// });
 
     
+e.target.parentNode
      
 </script>
 </html>
