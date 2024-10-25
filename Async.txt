@@ -5,6 +5,10 @@ Execution Context
 
 execute one line of code at a time
 
+js engine akele bahut slowly par woh kahi be akele nahi milega woh hamesa ek runtime enviorment milega
+
+
+
 console.log 1
 console.log 2
 
@@ -12,5 +16,18 @@ call stack memory heap
 
 Blocking code non blocking code
 
+blocking code = read file sync 
+non-blocking code = read file async
+
+file read karne ke liye execution access kernel ko diya jata he phir wapas program diya jata he 
+
+
+async task batane ke liye yeh hamare pas yeh sab api hoti he 
+
+
 in diagram take for example print 1 setTimeout(0,print 2 ),print 3 ab 2 will be printed after 3 event if its timeout is 0 kyuki woh fucntion he toh register call back se hoke queue se hoke stack me jayega to execute 
 fetch is something which has promise so it has a priority queue .
+
+
+Heap memory is used by all the parts of the application whereas stack memory is used only by one thread of execution. Whenever an object is created, it's always stored in the Heap space and stack memory contains the reference to it.
+
