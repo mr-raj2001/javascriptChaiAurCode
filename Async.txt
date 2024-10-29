@@ -43,3 +43,11 @@ there are 5 states in xml
 2 readers recived
 3 loading 
 4 done
+
+
+the promise objecy represents the eventual completion or failure of an async operations and its resulting value 
+
+promise has three state :
+pending 
+fulffiled
+rejected
