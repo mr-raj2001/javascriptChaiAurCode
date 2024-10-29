@@ -6,25 +6,43 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <button id="click" disabled>Click me!</button>
+    <div id="insert"></div>
 </body>
 <script>
-    const reqUrl = 'https://api.github.com/users/mr-raj2001'
-  const xhr =  new XMLHttpRequest();
-  xhr.open('GET', reqUrl)
-  //console.log("here");
-  xhr.onreadystatechange = function(){
-    console.log(xhr.readyState);
-    if(xhr.readyState === 4){
-        const data = JSON.parse(this.reponseText);
-        console.log(data.followers);
-        
+    const reqUrl = 'https://api.github.com/users/mr-raj2001';
+    const insert = document.getElementById('insert');
+    const button = document.getElementById('click');
+    let data;
+
+    // Check if data exists in localStorage
+    if (localStorage.getItem('userData')) {
+        data = JSON.parse(localStorage.getItem('userData'));
+        button.disabled = false;  // Enable the button if data is available
+    } else {
+        // If not, fetch the data from the API
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', reqUrl);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) { // Check for successful response
+                data = JSON.parse(xhr.responseText);
+                localStorage.setItem('userData', JSON.stringify(data));  // Save data in localStorage
+                button.disabled = false;  // Enable the button after data is loaded
+            }
+        };
+        xhr.send();
     }
-  }
- 
-  
-  xhr.send();
+
+    // Button click event to display data
+    button.addEventListener('click', () => {
+        if (data) {
+            insert.innerHTML = `
+                <p>Name: ${data.name}</p>
+                <img src="${data.avatar_url}" alt="Avatar" width="150" height="150">
+            `;
+        } else {
+            insert.innerHTML = "Data not loaded yet!";
+        }
+    });
 </script>
 </html>
-
-//most of the time reponse string me ata he 
