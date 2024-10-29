@@ -51,3 +51,26 @@ promise has three state :
 pending 
 fulffiled
 rejected
+
+
+yeh 404 400 yeh sab errors yeh response me ayega yeh reject me nahi ayega browser ka nahi pata yeh sab ke bare me browser just knows woh nahi chala toh error 
+matlab woh request kar hi nahi paya he 
+
+
+fetch ke liye ek special micro task queue ya priority queue banti he 
+
+diagram 6:36 in 
+fetch do hisso me baghta he 1st hota he variables ke liye space ocupy karne ke liye aur dusra bgahta he browser me api request ke liye 
+
+
+jo data :-
+onfulfilled[]
+onRejection[]  fields he woh private ap usko access nahi kar sakte ho
+
+
+woh data he woh network request fire karta he phir jake onfulfilled ya onrejection me jakeyga
+
+chaiye woh 404 bhi gaya woh fulfilled hi he .network reuest nahi hona onrejection me ata he woh hua isiliye 404 aya he 
+
+
+phir yeh onfulfiled on response data ko fulfill karta he
