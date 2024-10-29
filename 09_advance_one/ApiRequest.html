@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <button id="click" disabled>Click me!</button>
+    <button id="click">Click me!</button>
     <div id="insert"></div>
 </body>
 <script>
@@ -15,23 +15,19 @@
     const button = document.getElementById('click');
     let data;
 
-    // Check if data exists in localStorage
-    if (localStorage.getItem('userData')) {
-        data = JSON.parse(localStorage.getItem('userData'));
-        button.disabled = false;  // Enable the button if data is available
-    } else {
-        // If not, fetch the data from the API
-        const xhr = new XMLHttpRequest();
-        xhr.open('GET', reqUrl);
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4 && xhr.status === 200) { // Check for successful response
-                data = JSON.parse(xhr.responseText);
-                localStorage.setItem('userData', JSON.stringify(data));  // Save data in localStorage
-                button.disabled = false;  // Enable the button after data is loaded
-            }
-        };
-        xhr.send();
-    }
+    // Fetch the data from the API
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', reqUrl);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) { // Check for successful response
+            data = JSON.parse(xhr.responseText);
+            console.log(data);  // Log data to console
+
+            // Enable the button once data is loaded
+            // button.disabled = false;
+        }
+    };
+    xhr.send();
 
     // Button click event to display data
     button.addEventListener('click', () => {
