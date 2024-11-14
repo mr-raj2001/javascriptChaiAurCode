@@ -1,0 +1,18 @@
+#javascript and classes
+
+however js is a prototype based language, and its classes are primarly synthatic sugar
+
+#object is collection of properties and methods
+
+constructor
+prototypes
+classes
+instances
+
+
+prototype
+
+js deafult behavuioral is prototypel behaviour
+
+woh parents ko acces grandparents ko access jab tak usko null value na mil jaye 
+
