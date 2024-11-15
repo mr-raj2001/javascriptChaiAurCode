@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button Clicked</button>
+</body>
+<script>
+    class React {
+        constructor(){
+            this.library = "React"
+            this.server = "https://localhost:300"
+
+            //requirement refference miljaye button ka aur kuch print ho jaye
+
+            document.querySelector('button').addEventListener('click', this.handleClick.bind(this))
+            
+        }
+
+        handleClick(){
+            console.log("button clicked");
+            console.log(this.server);  //yeh refference mil raha he aur upar wale this ka bind akrna padega woh bind se karenge 
+            //bind this ke baad react ke andar jitne bhi functions define kiya jaye the unka access mil jata he 
+
+            
+            
+            
+        }
+    }
+
+    const app = new React
+</script>
+</html>
