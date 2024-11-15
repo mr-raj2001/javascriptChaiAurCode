@@ -62,3 +62,9 @@ myHeroes.hitesh();
 
 //Object.setPrototypeOf(TeachingSupport, Teahcer) //TeachingSupport teacher ki access kar leta he 
 
+//agar ek execution context he ek aur functional context ke anadar then this ko kese pata chalega konsi context ki baat 
+//chal rahi he so yaha par by default this global context refer karta he
+//browser = {this = window}
+//node = {} //empty object //imp for interview
+
+
